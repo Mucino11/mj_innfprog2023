@@ -5,5 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Variables Cheat Sheet</title>
   </head>
-  <body></body>
+  <body>
+    <h1 id="headline">Variables</h1>
+    <p>Her læerer vi litt om variabler.</p>
+    <p>Variabler kan tenkes på som gave.</p>
+    <p>Gaver vi gir, vet vi hva innholder.</p>
+    <p>Gave vi få må vi pakke opp.</p>
+    <script>
+      const newHeadline = "Variables Cheat Sheet";
+      console.log(newHeadline);
+      //  Finn html element med id headline og bytt ut verdien
+      document.getElementById("headline").innerHTML = newHeadline;
+
+      const newStatment = 10 + 12;
+      document.querySelector("p").innerHTML = newStatment;
+    </script>
+  </body>
 </html>
