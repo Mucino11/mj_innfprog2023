@@ -31,7 +31,7 @@
         </nav>
     </header>
     <main>
-        
+    
         <section id="notebook">
             <div id="notebook-page">
                 
@@ -42,6 +42,7 @@
                         <td>Variabler</td>
                         <td id="variablesCount">0</td>
                     </tr>
+                
                     <tr>
                         <td><img src="icons/array.svg" alt="" /></td>
                         <td>Arrayer</td>
@@ -75,18 +76,14 @@
     </main>
     <script>
         //PREPARE GAME CONFIG AND VARIABLES
-
         const gameConfig = {
             playerName: "Marius",
             energy: 5,
             points: 10,
             duration: 138
         }
-        //TODO: config
-        document.getElementById("playerName").innerHTML = gameConfig.playerName
-        document.getElementById("energy").innerHTML = gameConfig.energy
-        document.getElementById("points").innerHTML = gameConfig.points
-        document.getElementById("duration").innerHTML = gameConfig.duration
+
+
         //TODO: notebook
         const notebook = {
             variables: 3,
@@ -94,20 +91,33 @@
             loops: 4,
             functions: 7 
         }
-        document.getElementById("variablesCount").innerHTML = notebook.variables
+        
+       
+        //(BONUS) TODO: function for all prints
+
+        function updateStaticUI (){
+                    //TODO: config
+       // document.getElementById("playerName").innerHTML = gameConfig.playerName
+        document.getElementById("energy").innerHTML = gameConfig.energy
+        document.getElementById("points").innerHTML = gameConfig.points
+        document.getElementById("duration").innerHTML = gameConfig.duration
+
+         //TODO: print playerinfo to HTML
+         document.getElementById("variablesCount").innerHTML = notebook.variables
         document.getElementById("arraysCount").innerHTML = notebook.arrays
         document.getElementById("loopsCount").innerHTML = notebook.loops
         document.getElementById("functionsCount").innerHTML = notebook.functions
 
-       
-        if (gameConfig.playerName === ""){
-            document.getElementById("playerName").innerHTML = "Waiting for player..."
-        }
-        //TODO: print playerinfo to HTML
         
         //TODO: print notebook info to HTML
-
-        //(BONUS) TODO: function for all prints
+        if (gameConfig.playerName === ""){
+            document.getElementById("playerName").innerHTML = "Waiting for player..."
+        } else {
+            document.getElementById("playerName").innerHTML = gameConfig.playerName
+        }   
+        }
+        // Kjøre funksjonen for utskrift
+        updateStaticUI()
         
     </script>
 </body>
