@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="name"></p>
+    <p id="age"></p>
+    <p id="mail"></p>
+
+    <script>
+      function print(
+        name = "Ikke oppgitt",
+        mail = "Ikke oppgitt",
+        birthday = "Ikke Oppgitt"
+      ) {
+        document.getElementById("name").innerHTML = name;
+        document.getElementById("age").innerHTML = age;
+        document.getElementById("mail").innerHTML = mail;
+        if (birthdayear === "Ikke oppgitt") {
+          document.getElementById("age").innerHTML = birthdayear;
+        } else {
+          document.getElementById("age").innerHTML = 2023 - Number(birthday);
+        }
+        print("Marius", "musajall12@gmail.com", 1996);
+      }
+    </script>
+  </body>
+</html>
