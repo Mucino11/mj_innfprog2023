@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Cheat sheet</title>
+    <style>
+      #knapp {
+        font-size: 30px;
+        padding: 10px;
+        color: #ffffff;
+        border: 3px, solid darkslategray;
+        transition: ease-in-out 0.4s;
+      }
+      .red {
+        background-color: red;
+      }
+      .green {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="knapp" class="green">Trykk meg</button>
+    <p id="melding"></p>
+    <script>
+      // sjekk hva et event innholder av egenskaper
+      document.addEventListener("mousemove", function (event) {
+        //console.log(event);
+      });
+
+      const knapp = document.getElementById("knapp");
+      // vi skal endre  knappettekst  nbår vi holder muspekeren over knappen
+      knapp.addEventListener("mouseover", function (event) {
+        knapp.innerHTML = "Nei, ikke trykk på meg...";
+        knapp.classList.remove("green");
+        knapp.classList.add("red");
+      });
+
+      knapp.addEventListener("mouseout", function (event) {
+        knapp.innerHTML = "Trykk meg";
+        knapp.classList.remove("red");
+        knapp.classList.add("green");
+      });
+      // vi skal lage en eventlistener etter trykk på knapp med id knapp
+
+      knapp.addEventListener("click", function (event) {
+        console.log(event);
+        document.getElementById("melding").innerHTML =
+          "Du klarte ikke dy deg, kunne du?!";
+      });
+    </script>
+  </body>
+</html>
