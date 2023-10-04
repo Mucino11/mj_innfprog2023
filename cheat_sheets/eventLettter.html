@@ -25,10 +25,45 @@
         padding: 2rem;
         font-family: "Caveat", cursive;
         font-size: 4rem;
+        overflow: hidden;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        color: white;
+      }
+      ul.navbar {
+        background-color: rgba(255, 255, 255, 0.8);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        margin: 0;
+      }
+
+      ul.navbar li {
+        margin: 0 20px;
+      }
+
+      ul.navbar a {
+        color: #333;
+        text-decoration: none;
+        font-size: 1.5rem;
       }
     </style>
   </head>
   <body>
+    <ul class="navbar">
+      <li><a href="eventLettter.html">Home</a></li>
+      <li><a href="https://www.w3schools.com/">W3School</a></li>
+      <li><a href="https://www.hiof.no/">HIOF</a></li>
+    </ul>
     <main>
       <div id="text"></div>
     </main>
