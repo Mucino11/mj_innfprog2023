@@ -78,6 +78,24 @@
       }
       // starter animasjon
       renderFrames();
+
+      // Function to draw a pointy arrow
+      function drawArrow(x, y) {
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        ctx.lineTo(x + 20, y);
+        ctx.lineTo(x + 10, y - 20);
+        ctx.lineTo(x, y);
+        ctx.strokeStyle = "blue"; // Arrow color
+        ctx.fillStyle = "blue"; // Fill color
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
+      }
+
+      // Call the drawArrow function with the desired position (x, y)
+      drawArrow(200, 300);
     </script>
   </body>
 </html>
